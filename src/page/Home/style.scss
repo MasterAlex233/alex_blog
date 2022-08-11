@@ -1,0 +1,19 @@
+.home {
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+	&__section-list {
+		width: 85%;
+		background-color: rgba(255, 255, 255, 0.9);
+		max-width: 1200px;
+		padding: 20px;
+	}
+
+	@media screen and (max-width: 768px) {
+		&__section-list {
+			width: 100%;
+			padding: 10px;
+		}
+	}
+}

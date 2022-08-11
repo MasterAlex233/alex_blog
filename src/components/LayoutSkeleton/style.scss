@@ -1,0 +1,22 @@
+$bg-color: #222;
+
+.basic-skeleton {
+  min-height: 100vh;
+  background: #333;
+
+  &__header {
+    width: 100%;
+    min-height: 240px;
+    background: #222;
+
+    &__background {
+      width: 100%;
+      max-height: 360px;
+      overflow: hidden;
+
+      &--image {
+        width: 100%;
+      }
+    }
+  }
+}

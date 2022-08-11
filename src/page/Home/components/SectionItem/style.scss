@@ -1,0 +1,61 @@
+.home-article-item {
+	position: relative;
+
+	&__title {
+		font-size: 24px;
+	}
+	&__description {
+		font-size: 14px;
+		color: #999;
+		user-select: none;
+
+		.iconfont {
+			font-size: 14px;
+		}
+	}
+	&__abstract {
+		font-size: 16px;
+	}
+
+	&__button {
+		font-size: 14px;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	&__button:hover {
+		opacity: 0.6;
+	}
+
+	div {
+		padding-bottom: 12px;
+	}
+}
+
+.home-section-space {
+	padding: 10px 0;
+	height: 30px;
+	position: relative;
+
+	&__line {
+		height: 1px;
+		margin-top: 4.5px;
+		width: 100%;
+		background-color: #ccc;
+	}
+
+	&__white {
+		position: absolute;
+
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home-article-item {
+		zoom: 0.8;
+
+		div {
+			padding-bottom: 8px;
+		}
+	}
+}

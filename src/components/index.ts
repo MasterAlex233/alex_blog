@@ -1,5 +1,5 @@
-import HomeNavigate from './HomeNavigate'
+import NavigateBar from './NavigateBar'
 
 export {
-  HomeNavigate
+  NavigateBar
 }
