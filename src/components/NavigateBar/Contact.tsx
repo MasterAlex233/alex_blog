@@ -12,7 +12,7 @@ function Contact(props: ContactType) {
 
   const renderContactValue = useCallback((item: ReduxContactType) => {
     if (item.hoverImageSrc) {
-      
+
     }
     if (item.link) {
       return <a href={item.link} target="_blank" rel="noreferrer">{item.value}</a>
@@ -24,14 +24,14 @@ function Contact(props: ContactType) {
     <div className='contact'>
       <div className='contact__name'>
         {props.data.map(item =>
-          <div className='contact__name-item'>
+          <div key={item.name} className='contact__name-item'>
             <div className='contact__name-item--text'>{item.name.split('').map((nameStr, index) => <span key={index}>{nameStr}</span>)}</div>
             <div className='contact__name-item--icon'>:</div>
           </div>
         )}
       </div>
       <div className='contact__value'>
-        {props.data.map(item => <div className='contact__value-item'>{renderContactValue(item)}</div>)}
+        {props.data.map(item => <div key={item.name} className='contact__value-item'>{renderContactValue(item)}</div>)}
       </div>
     </div>
   );

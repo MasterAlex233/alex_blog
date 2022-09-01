@@ -1,0 +1,44 @@
+{
+	"userInfo": {
+		"header": "http://localhost:3000/static/media/header.jpg",
+		"contacts": [
+			{
+				"name": "电子邮箱",
+				"value": "534868976@qq.com"
+			},
+			{
+				"name": "微信",
+				"value": "MasterAlex233",
+				"hoverImageSrc": "https://pics6.baidu.com/feed/4034970a304e251f9cd275c1f2127c1d7f3e5304.jpeg"
+			},
+			{
+				"name": "GitHub",
+				"value": "ASombre",
+				"link": "https://github.com/ASombra"
+			}
+		]
+	},
+	"articles": [
+		{
+			"id": 1,
+			"title": "文章标题1",
+			"abstract": "这里是文章的摘要，当然有的文章没有摘要，没有摘要的文章就没有办法了，不太清楚取直接取md会不会有啥问题，所以不知道还能不能直接取用，其实最好的办法还是用AI直接生成一段摘要，但是现在还不知道该怎么搞啊,这里是文章的摘要，当然有的文章没有摘要，没有摘要的文章就没有办法了，不太清楚取直接取md会不会有啥问题，所以不知道还能不能直接取用，其实最好的办法还是用AI直接生成一段摘要，但是现在还不知道该怎么搞啊",
+			"editTime": "2022-08-04 09:22:34",
+			"content": "src/data/article/test.md"
+		},
+		{
+			"id": 2,
+			"title": "文章标题2",
+			"abstract": "这里是文章的摘要，当然有的文章没有摘要，没有摘要的文章就没有办法了，不太清楚取直接取md会不会有啥问题，所以不知道还能不能直接取用，其实最好的办法还是用AI直接生成一段摘要，但是现在还不知道该怎么搞啊",
+			"editTime": "2022-08-04 09:22:34",
+			"content": "./article/test.md"
+		},
+		{
+			"id": 3,
+			"title": "文章标题3",
+			"abstract": "这里是文章的摘要，当然有的文章没有摘要，没有摘要的文章就没有办法了，不太清楚取直接取md会不会有啥问题，所以不知道还能不能直接取用，其实最好的办法还是用AI直接生成一段摘要，但是现在还不知道该怎么搞啊",
+			"editTime": "2022-08-04 09:22:34",
+			"content": "./article/test.md"
+		}
+	]
+}

@@ -1,7 +1,9 @@
 import { RootState, Dispatch } from "@/rematch/store";
 import { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Motion, spring, presets } from "react-motion"
+import type { NavigateBarDataType } from "@/rematch/navigateBar"
+import fetch from '@/utils/fetch'
+import { Motion, spring } from "react-motion"
 import HideButton from "./HideButton"
 import Contact from "./Contact"
 import './style.scss';
@@ -11,6 +13,13 @@ function NavigateBar() {
   const navigateBar = useSelector((state: RootState) => state.navigateBar)
   const AppState = useSelector((state: RootState) => state.AppState)
   const dispatch = useDispatch<Dispatch>()
+
+  useEffect(() => {
+    fetch.get<NavigateBarDataType>('userInfo')
+      .then(data => {
+        dispatch.navigateBar.setNavigateBarData({ ...data, header: '' })
+      })
+  }, [dispatch.navigateBar])
 
   //关闭弹窗
   const handleClickClose = useCallback(() => {
@@ -35,7 +44,7 @@ function NavigateBar() {
                 <div className='nav__body' style={{ left: `${interpolatingStyle.right}px` }}>
                   <i className='iconfont icon-guanbi' onClick={handleClickClose} />
                   <div className='nav__body__header'>
-                    <img className='nav__body__header--image' src={require('../../static/images/header.jpg')} alt='' />
+                    <img className='nav__body__header--image' src={navigateBar.data.header} alt='' />
                     <div className='nav__body__header--border' />
                   </div>
                   <Contact data={navigateBar.data.contacts} />

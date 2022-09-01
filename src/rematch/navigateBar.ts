@@ -7,7 +7,8 @@ export interface NavigateBarStateType {
 }
 
 export interface NavigateBarDataType {
-	contacts: ContactType[]
+	contacts: ContactType[],
+	header: string,
 }
 
 export interface ContactType {
@@ -21,11 +22,8 @@ export const navigateBar = createModel<RootModel>()({
 	state: {
 		isShow: false,
 		data: {
-			contacts: [
-				{ name: '电子邮箱', value: '534868976@qq.com' },
-				{ name: '微信', value: 'MasterAlex233', hoverImageSrc: 'https://pics6.baidu.com/feed/4034970a304e251f9cd275c1f2127c1d7f3e5304.jpeg' },
-				{ name: 'GitHub', value: 'ASombre', link: 'https://github.com/ASombra' },
-			]
+			contacts: [],
+			header: '',
 		},
 	} as NavigateBarStateType,
 	reducers: {

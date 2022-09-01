@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom"
 import { NavigateBar } from "@/components"
 import { BasicSkeleton } from "@/components/LayoutSkeleton"
 import Home from '@/page/Home'
+import Article from '@/page/Article'
 import { useDispatch } from "react-redux";
 import { Dispatch } from "./rematch/store";
 import "./App.scss"
@@ -30,6 +31,7 @@ function App() {
       <Routes >
         <Route path="/" element={<BasicSkeleton />} >
           <Route path="home" element={<Home />} />
+          <Route path="article/:articleId" element={<Article />} />
         </Route>
       </Routes>
     </div >

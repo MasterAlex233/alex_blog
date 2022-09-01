@@ -19,6 +19,6 @@ export const AppState = createModel<RootModel>()({
     setScroll: (state: AppStateType, scroll: number) => ({ ...state, scroll })
   },
   effects: (dispatch) => ({
-
+    
   }),
 })
